@@ -29,11 +29,11 @@ const Navbar = () => {
     // navbar items 
     const navItems = [
         {link : "Home" , path : "home"},
-        {link : "Service" , path : "Service"},
+        {link : "Service" , path : "service"},
         {link : "About" , path : "about"},
         {link : "Product" , path : "product"},
         {link : "Testimonials" , path : "testimonials"},
-        {link : "FAQ" , path : "fag"}
+        {link : "FAQ" , path : "faq"}
     ];
     
     console.log(isSticky);
@@ -57,7 +57,7 @@ const Navbar = () => {
             {navItems.map(({ link, path }) => (
               <Link 
                 key={path} spy={true} smooth={true} offset={-100} to={path}
-                className="block text-gray900 hover:text-brandPrimary first:font-medium cursor-pointer"
+                className="block text-base text-gray900 hover:text-brandPrimary first:font-medium cursor-pointer"
               >
                 {link}
               </Link>
