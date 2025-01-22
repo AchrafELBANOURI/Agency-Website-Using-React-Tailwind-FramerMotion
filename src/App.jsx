@@ -3,8 +3,10 @@ import About from './components/About';
 import Blog from './components/Blog';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
+import Newsletter from './components/Newsletter';
 import Products from './components/Products';
 import Services from './components/Services';
+import MyFooter from './components/MyFooter';
 
 function App() {
 
@@ -16,6 +18,8 @@ function App() {
       <About/>
       <Products />
       <Blog />
+      <Newsletter />
+      <MyFooter />
     </>
   );
 }
