@@ -64,7 +64,6 @@ const Products = () => {
                     <img src="companies/company6.png" alt="" className='cursor-pointer'/>
                     <div className='flex items-center gap-2'>
                         <a href="" className='font-bold text-brandPrimary hover:text-neutral-700 flex gap-2'>Meet all customers <img src="Right.png" alt="" /></a>
-                        
                     </div>
                 </div>
               </div>
