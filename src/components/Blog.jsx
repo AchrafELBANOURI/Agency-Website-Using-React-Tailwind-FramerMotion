@@ -1,4 +1,6 @@
 import React from 'react'
+import {motion} from 'framer-motion'
+import {fadeIn} from '../variants'
 
 const Blog = () => {
     const blogs = [
@@ -8,7 +10,12 @@ const Blog = () => {
     ]
   return (
     <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-12" id='faq'>
-      <div className='text-center md:w-1/2 mx-auto'>
+      <motion.div 
+        variants={fadeIn('left' , 0.3)}
+        initial = 'hidden' 
+        whileInView={'show'}
+        viewport={{once : false , amount : 0.7}}
+        className='text-center md:w-1/2 mx-auto'>
         <h2 className="text-4xl text-neutralDGrey font-semibold mb-4">
           Caring is the new marketing
         </h2>
@@ -18,10 +25,15 @@ const Blog = () => {
           how our community are increasing their membership income and lot's
           more.​
         </p>
-      </div>
+      </motion.div>
 
         {/* all blogs */}
-      <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 items-center justify-between'>
+      <motion.div 
+        variants={fadeIn('right' , 0.3)}
+        initial = 'hidden' 
+        whileInView={'show'}
+        viewport={{once : false , amount : 0.7}}
+        className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 items-center justify-between'>
         {
             blogs.map( blog => 
                 <div key={blog.id} className='mx-auto relative mb-12 cursor-pointer'>
@@ -35,7 +47,7 @@ const Blog = () => {
                 </div>
             )
         }
-      </div>
+      </motion.div>
     </div>
   );
 }

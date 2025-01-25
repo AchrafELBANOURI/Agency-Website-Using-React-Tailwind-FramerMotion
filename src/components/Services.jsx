@@ -1,4 +1,6 @@
 import React from 'react'
+import { motion } from 'framer-motion'
+import { fadeIn } from '../variants'
 
 const Services = () => {
   const services = [
@@ -8,7 +10,13 @@ const Services = () => {
   ];
   return (
     <div className='md:px-14 px-4 py-16 max-w-screen-2xl mx-auto' id='service'>
-      <div className='text-center my-8'>
+      <motion.div 
+        variants={fadeIn('up' , 0.2)}
+        initial = 'hidden' 
+        whileInView={'show'}
+        viewport={{once : false , amount : 0.7}}
+        className='text-center my-8'
+      >
         <h2 className='text-4xl text-neutralDGrey font-semibold mb-2'>Our Clients</h2>
         <p className='text-neutralGrey'>We have been working with some Fortune 500+ clients</p>
 
@@ -23,15 +31,25 @@ const Services = () => {
             <img src="companies/company7.png" alt="Company 7" />
         </div>
 
-      </div>
+      </motion.div>
       {/* Services Card */}
-      <div className='mt-20 m:w-1/2 mx-auto text-center'>
+      <motion.div
+        variants={fadeIn('left' , 0.3)}
+        initial = 'hidden' 
+        whileInView={'show'}
+        viewport={{once : false , amount : 0.7}}
+        className='mt-20 m:w-1/2 mx-auto text-center'>
         <h2 className='text-4xl text-neutralDGrey font-semibold mb-2'>Manage your entire community in a single system</h2>
         <p className='text-neutralGrey'>Who is Nexcent suitable for ?</p>
-      </div>
+      </motion.div>
 
       {/* Cards */}
-      <div className='mt-14 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:w-11/12 mx-auto gap-12'>
+      <motion.div
+        variants={fadeIn('right' , 0.4)}
+        initial = 'hidden' 
+        whileInView={'show'}
+        viewport={{once : false , amount : 0.7}}
+        className='mt-14 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:w-11/12 mx-auto gap-12'>
         {
           services.map(({id, title , description , image}) => (
             <div key={id} className='px-4 py-8 text-center md:w-[300px] mx-auto md:h-80 rounded-md shadow cursor-pointer hover:-translate-y-5 hover:border-b-4 hover:border-indigo-700 transition-all duration-300 flex items-center justify-center'>
@@ -45,7 +63,7 @@ const Services = () => {
             </div>
           ))
         }
-      </div>
+      </motion.div>
     </div>
   )
 }
